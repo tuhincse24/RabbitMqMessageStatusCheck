@@ -1,11 +1,17 @@
-﻿namespace RabbitMqMessageStatusCheck
+﻿using Newtonsoft.Json;
+
+namespace RabbitMqMessageStatusCheck
 {
     public class QueueInfo
     {
-        public int memory { get; set; }
-        public int messages { get; set; }
-        public Messages_Details messages_details { get; set; }
-        public int messages_ready { get; set; }
+        [JsonProperty("memory")]
+        public int Memory { get; set; }
+        [JsonProperty("messages")]
+        public int Messages { get; set; }
+        [JsonProperty("messages_details")]
+        public Messages_Details Messages_details { get; set; }
+        [JsonProperty("messages_ready")]
+        public int MessagesReady { get; set; }
         public Messages_Ready_Details messages_ready_details { get; set; }
         public int messages_unacknowledged { get; set; }
         public Messages_Unacknowledged_Details messages_unacknowledged_details { get; set; }
@@ -19,7 +25,7 @@
         public object[] incoming { get; set; }
         public object[] deliveries { get; set; }
         public object[] consumer_details { get; set; }
-        public string name { get; set; }
+        public string Name { get; set; }
         public string vhost { get; set; }
         public bool durable { get; set; }
         public bool auto_delete { get; set; }

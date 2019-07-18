@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RabbitMqMessageStatusCheck": {
+      "commandName": "Project",
+      "commandLineArgs": "-q=EcapAuditLogQueue"
+    }
+  }
+}
